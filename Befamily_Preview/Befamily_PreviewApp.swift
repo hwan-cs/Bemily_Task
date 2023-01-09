@@ -8,13 +8,14 @@
 import SwiftUI
 
 @main
-struct Befamily_PreviewApp: App {
-    let persistenceController = PersistenceController.shared
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+struct Befamily_PreviewApp: App
+{
+    var body: some Scene
+    {
+        WindowGroup
+        {
+            PreviewScreenView(viewModel: PreviewViewModel(UIImage(systemName: "photo")!))
+                .environment(\.managedObjectContext, PreviewImageContainer().persistentContainer.viewContext)
         }
     }
 }
