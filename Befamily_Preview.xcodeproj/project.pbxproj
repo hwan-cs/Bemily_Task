@@ -16,6 +16,7 @@
 		1A79528D296C0103008609BB /* PreviewImage_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A79528C296C0103008609BB /* PreviewImage_Extension.swift */; };
 		1A79528F296C02E2008609BB /* PreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A79528E296C02E2008609BB /* PreviewViewModel.swift */; };
 		1AC4FB90296C0ACE00FA7CBE /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FB8F296C0ACE00FA7CBE /* FileManager.swift */; };
+		1AC4FB92296DBE8300FA7CBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FB91296DBE8300FA7CBE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1A79528C296C0103008609BB /* PreviewImage_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewImage_Extension.swift; sourceTree = "<group>"; };
 		1A79528E296C02E2008609BB /* PreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewModel.swift; sourceTree = "<group>"; };
 		1AC4FB8F296C0ACE00FA7CBE /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		1AC4FB91296DBE8300FA7CBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1A795275296BFF27008609BB /* PreviewScreenView.swift */,
 				1A79528E296C02E2008609BB /* PreviewViewModel.swift */,
 				1AC4FB8F296C0ACE00FA7CBE /* FileManager.swift */,
+				1AC4FB91296DBE8300FA7CBE /* Constants.swift */,
 				1A795277296BFF2A008609BB /* Assets.xcassets */,
 				1A795286296BFF83008609BB /* CoreData */,
 				1A795279296BFF2A008609BB /* Preview Content */,
@@ -167,6 +170,7 @@
 				1A79528F296C02E2008609BB /* PreviewViewModel.swift in Sources */,
 				1A795289296BFFA6008609BB /* PreviewImagesDataModel.xcdatamodeld in Sources */,
 				1A795274296BFF27008609BB /* Befamily_PreviewApp.swift in Sources */,
+				1AC4FB92296DBE8300FA7CBE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

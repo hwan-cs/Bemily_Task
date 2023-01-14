@@ -10,25 +10,20 @@ import UIKit
 
 extension PreviewImage
 {
-    var linkView: String
-    {
-        link ?? ""
-    }
-    
-    var imageID: String
-    {
-        id ?? ""
-    }
-    
-    var uiImage: UIImage
-    {
-        if !self.imageID.isEmpty, let image = FileManager().loadImage(with: imageID)
-        {
-            return image
-        }
-        else
-        {
-            return UIImage(systemName: "photo")!
-        }
-    }
+//    var linkView: String
+//    {
+//        link ?? ""
+//    }
+//    
+//    var uiImage: UIImage
+//    {
+//        if !self.linkView.isEmpty, let image = FileManager().loadImage(with: linkView)
+//        {
+//            return image
+//        }
+//        else
+//        {
+//            return UIImage(systemName: "photo")!
+//        }
+//    }
 }

@@ -14,8 +14,8 @@ struct Befamily_PreviewApp: App
     {
         WindowGroup
         {
-            PreviewScreenView(viewModel: PreviewViewModel(UIImage(systemName: "photo")!))
-                .environment(\.managedObjectContext, PreviewImageContainer().persistentContainer.viewContext)
+            PreviewScreenView()
+                .environment(\.managedObjectContext, PreviewImageContainer.shared.viewContext)
         }
     }
 }
