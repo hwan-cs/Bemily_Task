@@ -10,9 +10,9 @@ import UIKit
 
 extension FileManager
 {
-    func loadImage(with id: String) -> UIImage?
+    func loadImage(with pi: String) -> UIImage?
     {
-        let url = URL.documentsDirectory.appendingPathComponent("\(id).jpg")
+        let url = URL.documentsDirectory.appendingPathComponent("\(pi).jpg")
         do
         {
             let imageData = try Data(contentsOf: url)
@@ -25,9 +25,9 @@ extension FileManager
         }
     }
     
-    func saveImage(with id : String)
+    func saveImage(with pi : PreviewImage)
     {
-        self.downloadImage(id)
+        self.downloadImage(pi)
         { img in
             /// If image is system image, then a fail has occured downloading the image, so no need to save image in directory
             if img == UIImage(systemName: "photo")!
@@ -40,7 +40,8 @@ extension FileManager
                 {
                     do
                     {
-                        let url = URL.documentsDirectory.appendingPathComponent("\(id).jpg")
+                        let url = URL.documentsDirectory.appendingPathComponent("\(pi.imageID).jpg")
+                        print(url)
                         try data.write(to: url)
                     }
                     catch
@@ -56,11 +57,11 @@ extension FileManager
         }
     }
     
-    func downloadImage(_ url: String, completion: @escaping (_ img: UIImage) -> Void)
+    func downloadImage(_ pi: PreviewImage, completion: @escaping (_ img: UIImage) -> Void)
     {
         DispatchQueue.global(qos: .background).async
         {
-            if let imageUrl = URL(string: url)
+            if let imageUrl = URL(string: pi.link ?? "https://source.unsplash.com/random")
             {
                 URLSession.shared.dataTask(with: imageUrl)
                 { (data, res, err) in

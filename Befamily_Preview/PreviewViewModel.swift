@@ -6,25 +6,37 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
+import Combine
 
 class PreviewViewModel: ObservableObject
 {
-    @Published var link = ""
-    @Published var img: UIImage
+    @Published var imgArray: [PreviewImage] = []
     
-    var id: String?
+    let fileManager = FileManager()
     
-    init(_ img: UIImage)
+    func addImage(url: String)
     {
-        self.img = img
+        withAnimation
+        {
+            let newImage = PreviewImage(context: PreviewImageContainer.shared.viewContext)
+            newImage.link = url
+            newImage.id = UUID().uuidString
+            /// 사진 다운받기
+            fileManager.saveImage(with: newImage)
+            PreviewImageContainer.shared.saveData()
+        }
     }
     
-    init(_ previewImg: PreviewImage)
+    func save()
     {
-        link = previewImg.linkView
-        id = previewImg.imageID
-        img = previewImg.uiImage
+        PreviewImageContainer.shared.saveData()
+    }
+    
+    func getAllImages()
+    {
+        self.imgArray = PreviewImageContainer.shared.fetchSavedImages()
     }
 }
 

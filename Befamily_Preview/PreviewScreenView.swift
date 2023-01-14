@@ -69,6 +69,7 @@ struct PreviewScreenView: View
                         Button("삭제", action:
                         {
                             self.deleteAll()
+                            self.viewModel.getAllImages()
                         })
                         .font(.title2)
                         .fontWeight(.bold)
@@ -89,11 +90,9 @@ struct PreviewScreenView: View
     {
         for img in viewModel.imgArray
         {
-            print(img.link)
             PreviewImageContainer.shared.viewContext.delete(img)
         }
         viewModel.save()
-        self.viewModel.getAllImages()
     }
     
     /// 한 번에 탭을 연타 했을 때 너무 빨리 추가되지 않도록 debounce 0.2초 추가
@@ -112,8 +111,10 @@ struct PreviewScreenView: View
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+struct ContentView_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
         ZStack
         {
             PreviewScreenView()

@@ -66,7 +66,7 @@
 				1A795273296BFF27008609BB /* Befamily_PreviewApp.swift */,
 				1A795275296BFF27008609BB /* PreviewScreenView.swift */,
 				1A79528E296C02E2008609BB /* PreviewViewModel.swift */,
-				1AC4FB8F296C0ACE00FA7CBE /* FileManager.swift */,
+				1ABFA75D2973039600B2BD87 /* FileManager */,
 				1AC4FB91296DBE8300FA7CBE /* Constants.swift */,
 				1A795277296BFF2A008609BB /* Assets.xcassets */,
 				1A795286296BFF83008609BB /* CoreData */,
@@ -91,6 +91,14 @@
 				1A795287296BFFA6008609BB /* PreviewImagesDataModel.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1ABFA75D2973039600B2BD87 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				1AC4FB8F296C0ACE00FA7CBE /* FileManager.swift */,
+			);
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
